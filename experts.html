@@ -1,61 +1,360 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Expert Appointments | DecodBiz</title>
-  <link rel="stylesheet" href="css/style.css" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Experts | DecodBiz</title>
+
+<link rel="stylesheet" href="css/style.css">
+
 </head>
+
 <body>
-<div id="loading-overlay" class="loading-overlay"><div class="spinner"></div><div class="loading-text">Loading Experts…</div></div>
+
+<!-- LOADER -->
+
+<div id="loading-overlay" class="loading-overlay">
+<div class="spinner"></div>
+<div class="loading-text">Loading Experts…</div>
+</div>
+
+<!-- NAVBAR -->
+
 <nav id="navbar">
-  <div class="container nav-inner">
-    <a href="index.html" class="nav-logo font-display">Decod<span>Biz</span></a>
-    <div class="nav-links"><a href="index.html" class="nav-link">Home</a><a href="bizmatch.html" class="nav-link">BizMatch</a><a href="startups.html" class="nav-link">Startups</a><a href="schemes.html" class="nav-link">Schemes</a><a href="courses.html" class="nav-link">Courses</a><a href="experts.html" class="nav-link active">Experts</a><a href="vcs.html" class="nav-link">VC Firms</a><a href="about.html" class="nav-link">About</a></div>
-    <div class="nav-cta"><a href="bizmatch.html" class="btn btn-primary">Start BizMatch</a></div>
-    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-  </div>
+
+<div class="container nav-inner">
+
+<a href="index.html" class="nav-logo font-display">
+Decod<span>Biz</span>
+</a>
+
+<div class="nav-links">
+<a href="index.html" class="nav-link">Home</a>
+<a href="bizmatch.html" class="nav-link">BizMatch</a>
+<a href="startups.html" class="nav-link">Startups</a>
+<a href="schemes.html" class="nav-link">Schemes</a>
+<a href="courses.html" class="nav-link">Courses</a>
+<a href="experts.html" class="nav-link active">Experts</a>
+<a href="vcs.html" class="nav-link">VC Firms</a>
+<a href="about.html" class="nav-link">About</a>
+</div>
+
+<div class="nav-cta">
+<a href="bizmatch.html" class="btn btn-primary">
+Start BizMatch
+</a>
+</div>
+
+<button class="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+</div>
+
 </nav>
-<div id="mobile-menu" class="mobile-menu"><a href="index.html" class="nav-link">Home</a><a href="bizmatch.html" class="nav-link">BizMatch</a><a href="startups.html" class="nav-link">Startups</a><a href="schemes.html" class="nav-link">Schemes</a><a href="courses.html" class="nav-link">Courses</a><a href="experts.html" class="nav-link active">Experts</a><a href="vcs.html" class="nav-link">VC Firms</a><a href="about.html" class="nav-link">About</a><a href="bizmatch.html" class="btn btn-primary" style="margin-top:8px">Start BizMatch →</a></div>
-<section class="page-hero"><div class="hero-grid"></div><div class="container" style="position:relative"><div class="page-hero-pill">🧑‍💼 1-on-1 Expert Calls</div><h1 class="page-hero-title">Expert <span class="gradient-text">Appointments</span></h1><p class="page-hero-sub">Book direct calls with startup mentors, finance experts, legal advisors, and marketing consultants.</p></div></section>
-<section class="section" style="background:var(--slate-50)">
-  <div class="container">
-    <div class="cards-grid-2" id="experts-grid"></div>
-  </div>
+
+<!-- MOBILE MENU -->
+
+<div id="mobile-menu" class="mobile-menu">
+
+<a href="index.html" class="nav-link">Home</a> <a href="bizmatch.html" class="nav-link">BizMatch</a> <a href="startups.html" class="nav-link">Startups</a> <a href="schemes.html" class="nav-link">Schemes</a> <a href="courses.html" class="nav-link">Courses</a> <a href="experts.html" class="nav-link active">Experts</a> <a href="vcs.html" class="nav-link">VC Firms</a> <a href="about.html" class="nav-link">About</a>
+
+<a href="bizmatch.html" class="btn btn-primary" style="margin-top:8px">
+Start BizMatch →
+</a>
+
+</div>
+
+<!-- HERO -->
+
+<section class="page-hero">
+
+<div class="container">
+
+<div class="page-hero-pill">
+🧑‍💼 Startup Mentors
+</div>
+
+<h1 class="page-hero-title">
+
+Expert <span class="gradient-text">Advisors</span>
+
+</h1>
+
+<p class="page-hero-sub">
+
+Soon you will be able to connect with startup mentors,
+finance experts and legal advisors to accelerate your
+entrepreneur journey.
+
+</p>
+
+</div>
+
 </section>
-<footer><div class="container"><div class="footer-grid"><div><div class="nav-logo font-display" style="font-size:1.375rem;color:var(--white)">Decod<span style="color:var(--teal-400)">Biz</span></div><p class="footer-brand-desc">India's first Shark Tank-powered recommendation engine.</p></div><div><div class="footer-col-title">Platform</div><a href="bizmatch.html" class="footer-link">BizMatch</a><a href="startups.html" class="footer-link">Startups</a><a href="schemes.html" class="footer-link">Schemes</a></div><div><div class="footer-col-title">Resources</div><a href="experts.html" class="footer-link">Experts</a><a href="vcs.html" class="footer-link">VC Firms</a><a href="about.html" class="footer-link">About</a></div><div><div class="footer-col-title">Govt Links</div><a href="https://startupindia.gov.in" target="_blank" class="footer-link">Startup India ↗</a><a href="https://mudra.org.in" target="_blank" class="footer-link">MUDRA ↗</a></div></div><div class="footer-bottom"><span class="footer-copy">© 2025 DecodBiz 🇮🇳</span><span class="footer-disclaimer">Not affiliated with Shark Tank India</span></div></div></footer>
-<script src="data/all_startups.js"></script><script src="js/ui.js"></script>
+
+<!-- COMING SOON -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="text-center">
+
+<div class="section-label">
+Expert Marketplace
+</div>
+
+<h2 class="h2">
+Expert Mentorship Coming Soon
+</h2>
+
+<p class="body-lg">
+
+We are onboarding experienced startup mentors,
+finance professionals and legal advisors.
+
+Soon you will be able to book one-on-one calls
+to validate your business ideas and scale faster.
+
+</p>
+
+</div>
+
+<div class="card card-p-lg text-center mt-6">
+
+<div style="font-size:3rem">🚧</div>
+
+<p class="body-lg mt-3">
+Expert consultations will launch soon.
+</p>
+
+<a href="bizmatch.html" class="btn btn-navy mt-4">
+Explore BizMatch →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EXPERT SERVICES -->
+
+<section class="section" style="background:var(--slate-50)">
+
+<div class="container">
+
+<div class="text-center">
+
+<div class="section-label">
+Services
+</div>
+
+<h2 class="h2">
+What Experts Will Help With
+</h2>
+
+</div>
+
+<div class="cards-grid mt-6">
+
+<div class="step-card">
+
+<div class="step-icon">🦈</div>
+
+<div class="step-title">
+Pitch Preparation
+</div>
+
+<p class="step-text">
+
+Prepare investor-ready startup pitches
+and improve your fundraising strategy.
+
+</p>
+
+</div>
+
+<div class="step-card">
+
+<div class="step-icon">📊</div>
+
+<div class="step-title">
+Startup Finance
+</div>
+
+<p class="step-text">
+
+Financial planning, valuation
+and investment readiness.
+
+</p>
+
+</div>
+
+<div class="step-card">
+
+<div class="step-icon">⚖️</div>
+
+<div class="step-title">
+Legal Support
+</div>
+
+<p class="step-text">
+
+Company registration, IP protection
+and founder agreements.
+
+</p>
+
+</div>
+
+<div class="step-card">
+
+<div class="step-icon">📈</div>
+
+<div class="step-title">
+Growth Strategy
+</div>
+
+<p class="step-text">
+
+Marketing strategy,
+D2C growth and scaling guidance.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="section-sm section-dark">
+
+<div class="container text-center">
+
+<h2>
+Find Your Startup Idea First
+</h2>
+
+<p class="body-lg">
+
+Use BizMatch to discover businesses
+that match your profile.
+
+</p>
+
+<a href="bizmatch.html" class="btn btn-primary mt-4">
+
+Start BizMatch 🎯
+
+</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h3 class="nav-logo">
+Decod<span>Biz</span>
+</h3>
+
+<p class="footer-brand-desc">
+
+India's first Shark Tank powered
+startup recommendation platform.
+
+</p>
+
+</div>
+
+<div>
+
+<div class="footer-col-title">
+Platform
+</div>
+
+<a href="bizmatch.html" class="footer-link">BizMatch</a> <a href="startups.html" class="footer-link">Startups</a> <a href="schemes.html" class="footer-link">Schemes</a>
+
+</div>
+
+<div>
+
+<div class="footer-col-title">
+Resources
+</div>
+
+<a href="experts.html" class="footer-link">Experts</a> <a href="vcs.html" class="footer-link">VC Firms</a> <a href="about.html" class="footer-link">About</a>
+
+</div>
+
+<div>
+
+<div class="footer-col-title">
+Government
+</div>
+
+<a href="https://startupindia.gov.in" target="_blank" class="footer-link">
+Startup India ↗
+</a>
+
+<a href="https://mudra.org.in" target="_blank" class="footer-link">
+MUDRA ↗
+</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<span class="footer-copy">
+© 2025 DecodBiz 🇮🇳
+</span>
+
+<span class="footer-disclaimer">
+Not affiliated with Shark Tank India
+</span>
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="js/ui.js"></script>
+
 <script>
-const EXPERTS = [
-  { name:'Rajeev Kumar', title:'Shark Tank Consultant & Startup Mentor', avatar:'RK', color:'#0f3460', expertise:['Pitch Prep','Fundraising','Business Model Design'], bio:'Helped 200+ startups prepare Shark Tank pitches. Former investment analyst with 15+ years in early-stage funding.', rating:'4.9 ★', sessions:847, price:'₹2,500/hr', linkedin:'https://linkedin.com', slots:['Mon 10AM','Wed 3PM','Fri 11AM'] },
-  { name:'Meera Iyer', title:'CA & Finance Expert for MSMEs', avatar:'MI', color:'#065f46', expertise:['GST & Tax','Financial Planning','MSME Schemes'], bio:'Chartered Accountant specialising in MSME financial structuring, government scheme applications, and compliance.', rating:'4.8 ★', sessions:612, price:'₹1,800/hr', linkedin:'https://linkedin.com', slots:['Tue 2PM','Thu 4PM','Sat 10AM'] },
-  { name:'Arjun Patel', title:'D2C Growth Expert & Brand Strategist', avatar:'AP', color:'#7c3aed', expertise:['Brand Building','Digital Marketing','Quick Commerce'], bio:'Scaled 3 D2C brands from 0 to ₹50Cr. Expert in performance marketing, brand positioning, and Blinkit/Zepto.', rating:'4.7 ★', sessions:523, price:'₹2,200/hr', linkedin:'https://linkedin.com', slots:['Mon 3PM','Wed 11AM','Fri 4PM'] },
-  { name:'Shalini Verma', title:'Startup Legal Advisor — IP & Company Law', avatar:'SV', color:'#b45309', expertise:['Company Law','IP Rights','Term Sheet Review'], bio:'Partner at a Bangalore startup law firm. Specialises in founder agreements, IP protection, and Series A/B negotiations.', rating:'4.8 ★', sessions:389, price:'₹3,000/hr', linkedin:'https://linkedin.com', slots:['Tue 11AM','Thu 2PM','Sat 3PM'] },
-];
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('experts-grid').innerHTML = EXPERTS.map((e,i) => `
-    <div class="expert-card reveal" style="animation-delay:${i*80}ms">
-      <div style="display:flex;gap:16px;align-items:flex-start;margin-bottom:16px">
-        <div class="expert-avatar" style="background:linear-gradient(135deg,${e.color},${e.color}99)">${e.avatar}</div>
-        <div>
-          <div class="expert-name">${e.name}</div>
-          <div class="expert-title">${e.title}</div>
-          <div class="expert-rating">${e.rating} · ${e.sessions} sessions</div>
-        </div>
-      </div>
-      <div class="expert-chips">${e.expertise.map(x=>`<span class="expert-chip">${x}</span>`).join('')}</div>
-      <p class="expert-bio">${e.bio}</p>
-      <div class="expert-price">${e.price}</div>
-      <div style="margin-bottom:14px">
-        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--slate-400);margin-bottom:6px">Available Slots</div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap">${e.slots.map(s=>`<span style="padding:4px 10px;background:var(--teal-50);color:var(--teal-600);font-size:.78rem;font-weight:600;border-radius:var(--radius-full);border:1px solid rgba(20,184,166,.2)">${s}</span>`).join('')}</div>
-      </div>
-      <div style="display:flex;gap:8px">
-        <button class="btn btn-navy" style="flex:1" onclick="showToast('Booking system coming soon!','info')">📅 Book a Session</button>
-        <a href="${e.linkedin}" target="_blank" class="btn btn-outline" style="padding:10px 14px">in</a>
-      </div>
-    </div>`).join('');
-  initScrollReveal();
-  hideLoader();
-});
+
+document.addEventListener("DOMContentLoaded", function(){
+
+initNavbar()
+initScrollReveal()
+hideLoader()
+
+})
+
 </script>
-</body></html>
+
+</body>
+</html>
