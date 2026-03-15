@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BizMatch — Find Your Perfect Business | DecodBiz</title>
+  <meta name="description" content="Answer 8 questions and BizMatch recommends your top 4 startup ideas from 2,236 real pitches." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="loading-overlay" class="loading-overlay">
+  <div class="spinner"></div><div class="loading-text">Loading BizMatch…</div>
+</div>
+
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo font-display">Decod<span>Biz</span></a>
+    <div class="nav-links">
+      <a href="index.html"    class="nav-link">Home</a>
+      <a href="bizmatch.html" class="nav-link active">BizMatch</a>
+      <a href="startups.html" class="nav-link">Startups</a>
+      <a href="schemes.html"  class="nav-link">Schemes</a>
+      <a href="courses.html"  class="nav-link">Courses</a>
+      <a href="experts.html"  class="nav-link">Experts</a>
+      <a href="vcs.html"      class="nav-link">VC Firms</a>
+      <a href="about.html"    class="nav-link">About</a>
+    </div>
+    <div class="nav-cta"><a href="bizmatch.html" class="btn btn-primary">Start BizMatch</a></div>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div id="mobile-menu" class="mobile-menu">
+  <a href="index.html"    class="nav-link">Home</a>
+  <a href="bizmatch.html" class="nav-link active">BizMatch</a>
+  <a href="startups.html" class="nav-link">Startups</a>
+  <a href="schemes.html"  class="nav-link">Schemes</a>
+  <a href="courses.html"  class="nav-link">Courses</a>
+  <a href="experts.html"  class="nav-link">Experts</a>
+  <a href="vcs.html"      class="nav-link">VC Firms</a>
+  <a href="about.html"    class="nav-link">About</a>
+  <a href="bizmatch.html" class="btn btn-primary" style="margin-top:8px">Start BizMatch →</a>
+</div>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="hero-grid"></div>
+  <div class="container" style="position:relative">
+    <div class="page-hero-pill">🎯 Smart Matching Engine</div>
+    <h1 class="page-hero-title">Find Your Perfect <span class="gradient-text">Business Match</span></h1>
+    <p class="page-hero-sub">Answer 8 questions. Our algorithm scores <strong style="color:var(--white)">2,236 real startup pitches</strong> against your profile and returns your top 4 matches in seconds.</p>
+    <div style="display:flex;gap:24px;margin-top:18px;flex-wrap:wrap">
+      <span style="display:flex;align-items:center;gap:6px;font-size:.84rem;color:rgba(255,255,255,.5)"><span style="color:var(--teal-400)">✓</span> 2,236 startups</span>
+      <span style="display:flex;align-items:center;gap:6px;font-size:.84rem;color:rgba(255,255,255,.5)"><span style="color:var(--teal-400)">✓</span> Real investment data</span>
+      <span style="display:flex;align-items:center;gap:6px;font-size:.84rem;color:rgba(255,255,255,.5)"><span style="color:var(--teal-400)">✓</span> Govt scheme suggestions</span>
+    </div>
+  </div>
+</section>
+
+<!-- Form Section -->
+<section class="section" style="background:var(--slate-50);padding-top:48px">
+  <div class="container">
+    <div class="bizmatch-form">
+      <h2 class="h3" style="color:var(--navy-900);margin-bottom:6px">Your Business Profile</h2>
+      <p class="body-sm" style="margin-bottom:28px">All fields improve match accuracy. Takes ~2 minutes.</p>
+
+      <form id="bizmatch-form">
+        <div class="form-grid">
+          <!-- Investment Capital -->
+          <div class="form-group">
+            <label class="form-label">💵 Investment Capital <span class="form-required">*</span></label>
+            <select name="investment" id="investment" class="form-select" required>
+              <option value="">Select your budget…</option>
+              <option value="under-10">Under ₹10 Lakhs</option>
+              <option value="10-50">₹10 Lakhs – ₹50 Lakhs</option>
+              <option value="50-200">₹50 Lakhs – ₹2 Crore</option>
+              <option value="2cr-plus">₹2 Crore and above</option>
+            </select>
+          </div>
+
+          <!-- Domain Interest -->
+          <div class="form-group">
+            <label class="form-label">🏭 Industry Domain <span class="form-required">*</span></label>
+            <select name="domain" id="domain" class="form-select" required>
+              <option value="">Select an industry…</option>
+              <option value="any">Open to Any Industry</option>
+              <option value="food">Food & Beverage</option>
+              <option value="tech">Technology / SaaS</option>
+              <option value="fashion">Fashion & Beauty</option>
+              <option value="health">Health & Wellness</option>
+              <option value="fitness">Fitness & Sports</option>
+              <option value="education">Education / EdTech</option>
+              <option value="ev">EV / CleanTech</option>
+              <option value="home">Lifestyle & Home</option>
+              <option value="electronics">Electronics</option>
+              <option value="pets">Pet Products</option>
+              <option value="services">Business Services</option>
+              <option value="agri">AgriTech</option>
+              <option value="manufacturing">Manufacturing</option>
+              <option value="media">Media & Entertainment</option>
+            </select>
+          </div>
+
+          <!-- Risk Appetite -->
+          <div class="form-group">
+            <label class="form-label">⚡ Risk Appetite <span class="form-required">*</span></label>
+            <select name="risk" id="risk" class="form-select" required>
+              <option value="">Select risk tolerance…</option>
+              <option value="low">Low — Proven, steady returns</option>
+              <option value="medium">Medium — Balanced risk & growth</option>
+              <option value="high">High — Disruption, high reward</option>
+            </select>
+          </div>
+
+          <!-- City Tier -->
+          <div class="form-group">
+            <label class="form-label">🏙️ City Tier <span class="form-required">*</span></label>
+            <select name="cityTier" id="cityTier" class="form-select" required>
+              <option value="">Select city tier…</option>
+              <option value="tier1">Tier 1 — Mumbai, Delhi, Bangalore…</option>
+              <option value="tier2">Tier 2 — Pune, Jaipur, Lucknow…</option>
+              <option value="tier3">Tier 3 — Smaller towns & rural</option>
+            </select>
+          </div>
+
+          <!-- Work Style -->
+          <div class="form-group">
+            <label class="form-label">⏰ Work Commitment <span class="form-required">*</span></label>
+            <select name="workStyle" id="workStyle" class="form-select" required>
+              <option value="">Select commitment…</option>
+              <option value="full-time">Full-Time — Complete focus</option>
+              <option value="part-time">Part-Time — Side hustle</option>
+            </select>
+          </div>
+
+          <!-- Team Size -->
+          <div class="form-group">
+            <label class="form-label">👥 Team Size</label>
+            <select name="teamSize" id="teamSize" class="form-select">
+              <option value="any">Any team size</option>
+              <option value="solo">Solo — Start alone</option>
+              <option value="small">Small — 2 to 10 people</option>
+              <option value="medium">Medium — 10 to 50 people</option>
+            </select>
+          </div>
+
+          <!-- Expected ROI -->
+          <div class="form-group">
+            <label class="form-label">📈 Expected ROI Timeline</label>
+            <select name="roi" id="roi" class="form-select">
+              <option value="medium">1 to 3 years (Typical)</option>
+              <option value="short">6 to 12 months (Quick)</option>
+              <option value="long">3 to 5 years (Patient)</option>
+            </select>
+          </div>
+
+          <!-- Business Mode -->
+          <div class="form-group">
+            <label class="form-label">🌐 Business Mode</label>
+            <select name="mode" id="mode" class="form-select">
+              <option value="any">Any — Online or Offline</option>
+              <option value="online">Online / D2C / Digital</option>
+              <option value="offline">Offline — Physical store</option>
+              <option value="hybrid">Hybrid — Both</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-submit-wrap">
+          <button type="submit" class="btn btn-navy btn-submit">
+            🎯 Find My Business Matches
+          </button>
+          <p style="font-size:.8rem;color:var(--slate-400);margin-top:12px">Analyses 2,236 real Shark Tank pitches · Free · Instant</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Results Section -->
+<section id="results-section" style="display:none;padding:48px 0;background:var(--white)">
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:28px">
+      <div>
+        <h2 class="h3" style="color:var(--navy-900)">🎯 Your BizMatch Results</h2>
+        <p id="results-count" class="body-sm" style="margin-top:4px">Top 4 matches from 2,236 startups</p>
+      </div>
+      <button class="btn btn-outline" onclick="document.getElementById('results-section').style.display='none';window.scrollTo({top:0,behavior:'smooth'})">
+        ↑ Refine Preferences
+      </button>
+    </div>
+    <div id="results-container"></div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="nav-logo font-display" style="font-size:1.375rem;color:var(--white)">Decod<span style="color:var(--teal-400)">Biz</span></div><p class="footer-brand-desc">India's first Shark Tank-powered startup recommendation engine.</p></div>
+      <div><div class="footer-col-title">Platform</div><a href="bizmatch.html" class="footer-link">BizMatch</a><a href="startups.html" class="footer-link">Startup Library</a><a href="schemes.html" class="footer-link">Schemes</a></div>
+      <div><div class="footer-col-title">Resources</div><a href="experts.html" class="footer-link">Experts</a><a href="vcs.html" class="footer-link">VC Firms</a><a href="about.html" class="footer-link">About</a></div>
+      <div><div class="footer-col-title">Govt Links</div><a href="https://startupindia.gov.in" target="_blank" class="footer-link">Startup India ↗</a><a href="https://mudra.org.in" target="_blank" class="footer-link">MUDRA Loan ↗</a></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">© 2025 DecodBiz 🇮🇳</span><span class="footer-disclaimer">Not affiliated with Shark Tank India</span></div>
+  </div>
+</footer>
+
+<script src="data/all_startups.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/bizmatch.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tryInit = () => {
+      if (!window.STARTUPS_DB) { setTimeout(tryInit, 80); return; }
+      initBizMatchPage();
+      hideLoader();
+    };
+    tryInit();
+  });
+</script>
+</body>
+</html>

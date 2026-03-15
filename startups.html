@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Startup Library — 2,236 Startups | DecodBiz</title>
+  <meta name="description" content="Browse 2,236 real Shark Tank startup pitches. Filter by domain, season, risk level, and deal status." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="loading-overlay" class="loading-overlay">
+  <div class="spinner"></div><div class="loading-text">Loading 2,236 startups…</div>
+</div>
+
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo font-display">Decod<span>Biz</span></a>
+    <div class="nav-links">
+      <a href="index.html"    class="nav-link">Home</a>
+      <a href="bizmatch.html" class="nav-link">BizMatch</a>
+      <a href="startups.html" class="nav-link active">Startups</a>
+      <a href="schemes.html"  class="nav-link">Schemes</a>
+      <a href="courses.html"  class="nav-link">Courses</a>
+      <a href="experts.html"  class="nav-link">Experts</a>
+      <a href="vcs.html"      class="nav-link">VC Firms</a>
+      <a href="about.html"    class="nav-link">About</a>
+    </div>
+    <div class="nav-cta"><a href="bizmatch.html" class="btn btn-primary">Start BizMatch</a></div>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div id="mobile-menu" class="mobile-menu">
+  <a href="index.html"    class="nav-link">Home</a>
+  <a href="bizmatch.html" class="nav-link">BizMatch</a>
+  <a href="startups.html" class="nav-link active">Startups</a>
+  <a href="schemes.html"  class="nav-link">Schemes</a>
+  <a href="courses.html"  class="nav-link">Courses</a>
+  <a href="experts.html"  class="nav-link">Experts</a>
+  <a href="vcs.html"      class="nav-link">VC Firms</a>
+  <a href="about.html"    class="nav-link">About</a>
+  <a href="bizmatch.html" class="btn btn-primary" style="margin-top:8px">Start BizMatch →</a>
+</div>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="hero-grid"></div>
+  <div class="container" style="position:relative">
+    <div class="page-hero-pill">🦈 All Seasons · All Formats</div>
+    <h1 class="page-hero-title">Startup <span class="gradient-text">Library</span></h1>
+    <p class="page-hero-sub">Browse <strong style="color:var(--white)">2,236 real startup pitches</strong> with investment data, revenue figures, and original pitch videos. Search, filter, and discover.</p>
+  </div>
+</section>
+
+<!-- Search & Filter Controls -->
+<div class="library-controls">
+  <div class="container">
+    <div class="controls-row">
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="Search startups, domains, cities, founders…" />
+      </div>
+      <select id="filter-domain" class="filter-select">
+        <option value="">All Domains</option>
+        <!-- Populated by JS -->
+      </select>
+      <select id="filter-season" class="filter-select">
+        <option value="">All Seasons</option>
+        <!-- Populated by JS -->
+      </select>
+      <select id="filter-risk" class="filter-select">
+        <option value="">All Risk Levels</option>
+        <option value="low">Low Risk</option>
+        <option value="medium">Medium Risk</option>
+        <option value="high">High Risk</option>
+      </select>
+      <select id="filter-deal" class="filter-select">
+        <option value="">All Deals</option>
+        <option value="yes">Got Deal ✓</option>
+        <option value="no">No Deal</option>
+      </select>
+      <select id="filter-source" class="filter-select">
+        <option value="">All Sources</option>
+        <option value="shark_tank_india">Shark Tank India 🇮🇳</option>
+        <option value="startup_database">Global Database</option>
+      </select>
+      <button id="clear-filters" class="btn btn-outline btn-sm">Clear</button>
+      <span id="results-count-label" class="results-count">Loading…</span>
+    </div>
+  </div>
+</div>
+
+<!-- Startup Grid -->
+<main style="background:var(--slate-50);padding:32px 0 64px">
+  <div class="container">
+    <div class="startups-grid" id="startups-grid">
+      <!-- Skeleton cards shown while loading -->
+    </div>
+    <div id="pagination" class="pagination"></div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="nav-logo font-display" style="font-size:1.375rem;color:var(--white)">Decod<span style="color:var(--teal-400)">Biz</span></div><p class="footer-brand-desc">India's first Shark Tank-powered startup recommendation engine.</p></div>
+      <div><div class="footer-col-title">Platform</div><a href="bizmatch.html" class="footer-link">BizMatch</a><a href="startups.html" class="footer-link">Startup Library</a><a href="schemes.html" class="footer-link">Schemes</a></div>
+      <div><div class="footer-col-title">Resources</div><a href="experts.html" class="footer-link">Experts</a><a href="vcs.html" class="footer-link">VC Firms</a><a href="about.html" class="footer-link">About</a></div>
+      <div><div class="footer-col-title">Govt Links</div><a href="https://startupindia.gov.in" target="_blank" class="footer-link">Startup India ↗</a><a href="https://mudra.org.in" target="_blank" class="footer-link">MUDRA Loan ↗</a></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">© 2025 DecodBiz 🇮🇳</span><span class="footer-disclaimer">Not affiliated with Shark Tank India</span></div>
+  </div>
+</footer>
+
+<script src="data/all_startups.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/search.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', initLibraryPage);
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top VC Firms in India | DecodBiz</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div id="loading-overlay" class="loading-overlay"><div class="spinner"></div><div class="loading-text">Loading VC Firms…</div></div>
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo font-display">Decod<span>Biz</span></a>
+    <div class="nav-links"><a href="index.html" class="nav-link">Home</a><a href="bizmatch.html" class="nav-link">BizMatch</a><a href="startups.html" class="nav-link">Startups</a><a href="schemes.html" class="nav-link">Schemes</a><a href="courses.html" class="nav-link">Courses</a><a href="experts.html" class="nav-link">Experts</a><a href="vcs.html" class="nav-link active">VC Firms</a><a href="about.html" class="nav-link">About</a></div>
+    <div class="nav-cta"><a href="bizmatch.html" class="btn btn-primary">Start BizMatch</a></div>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div id="mobile-menu" class="mobile-menu"><a href="index.html" class="nav-link">Home</a><a href="bizmatch.html" class="nav-link">BizMatch</a><a href="startups.html" class="nav-link">Startups</a><a href="schemes.html" class="nav-link">Schemes</a><a href="courses.html" class="nav-link">Courses</a><a href="experts.html" class="nav-link">Experts</a><a href="vcs.html" class="nav-link active">VC Firms</a><a href="about.html" class="nav-link">About</a><a href="bizmatch.html" class="btn btn-primary" style="margin-top:8px">Start BizMatch →</a></div>
+<section class="page-hero"><div class="hero-grid"></div><div class="container" style="position:relative"><div class="page-hero-pill">💰 Venture Capital</div><h1 class="page-hero-title">Top VC Investments <span class="gradient-text">in India</span></h1><p class="page-hero-sub">India's leading venture capital firms — portfolio companies, investment stages, sector focus, and direct website links.</p></div></section>
+<section class="section" style="background:var(--slate-50)">
+  <div class="container">
+    <div class="cards-grid" id="vcs-grid"></div>
+  </div>
+</section>
+<footer><div class="container"><div class="footer-grid"><div><div class="nav-logo font-display" style="font-size:1.375rem;color:var(--white)">Decod<span style="color:var(--teal-400)">Biz</span></div><p class="footer-brand-desc">India's first Shark Tank-powered recommendation engine.</p></div><div><div class="footer-col-title">Platform</div><a href="bizmatch.html" class="footer-link">BizMatch</a><a href="startups.html" class="footer-link">Startups</a><a href="schemes.html" class="footer-link">Schemes</a></div><div><div class="footer-col-title">Resources</div><a href="experts.html" class="footer-link">Experts</a><a href="vcs.html" class="footer-link">VC Firms</a><a href="about.html" class="footer-link">About</a></div><div><div class="footer-col-title">Govt Links</div><a href="https://startupindia.gov.in" target="_blank" class="footer-link">Startup India ↗</a><a href="https://mudra.org.in" target="_blank" class="footer-link">MUDRA ↗</a></div></div><div class="footer-bottom"><span class="footer-copy">© 2025 DecodBiz 🇮🇳</span><span class="footer-disclaimer">Not affiliated with Shark Tank India</span></div></div></footer>
+<script src="data/all_startups.js"></script><script src="js/ui.js"></script>
+<script>
+const VCS = [
+  { name:'Sequoia Capital India (Peak XV)', color:'#0A2540', invested:'$9 Billion+', founded:2006, stage:['Seed','Series A','Series B','Series C'], sectors:['Tech','FinTech','Consumer','Healthcare'], portfolio:['Zomato','Ola','CRED','Razorpay','Unacademy'], desc:"India's leading VC with $9B+ AUM. Backed the country's most transformative founders since 2006.", website:'https://www.peakxv.com' },
+  { name:'Accel India', color:'#1d4ed8', invested:'$2 Billion+', founded:2008, stage:['Seed','Series A','Series B'], sectors:['SaaS','FinTech','Consumer Tech','Healthcare'], portfolio:['Flipkart','Swiggy','BrowserStack','FreshWorks'], desc:'Global VC with deep India presence, backing early-stage tech startups since 2008.', website:'https://www.accel.com' },
+  { name:'Blume Ventures', color:'#7c3aed', invested:'$400 Million+', founded:2010, stage:['Pre-Seed','Seed','Series A'], sectors:['Deep Tech','Consumer','B2B SaaS','Climate'], portfolio:['Unacademy','Slice','Grey Orange','Ideaforge'], desc:"India's most prolific early-stage fund — backing deep-tech, consumer, and B2B startups from day zero.", website:'https://blume.vc' },
+  { name:'Nexus Venture Partners', color:'#065f46', invested:'$2 Billion+', founded:2006, stage:['Seed','Series A','Series B'], sectors:['SaaS','FinTech','Consumer','AgriTech'], portfolio:['Snapdeal','Delhivery','Druva','Postman'], desc:'Multi-stage VC investing in India and US startups with $2B+ under management.', website:'https://nexusvp.com' },
+  { name:'Kalaari Capital', color:'#b45309', invested:'$700 Million+', founded:2006, stage:['Seed','Series A','Series B'], sectors:['Consumer Internet','Health Tech','Enterprise'], portfolio:['Dream11','Myntra','Urban Ladder','Cure.fit'], desc:'Thesis-driven fund focused on Indian consumer internet, digital health, and enterprise tech.', website:'https://www.kalaari.com' },
+  { name:'Matrix Partners India', color:'#0e7490', invested:'$1.5 Billion+', founded:2006, stage:['Seed','Series A'], sectors:['Consumer','SaaS','FinTech','EdTech'], portfolio:['OYO Rooms','Practo','Razorpay','Treebo'], desc:'Early-stage investor backing bold founders across consumer, SaaS, and fintech in India.', website:'https://www.matrixpartners.in' },
+];
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('vcs-grid').innerHTML = VCS.map((v,i) => `
+    <div class="vc-card reveal" style="animation-delay:${i*80}ms">
+      <div class="vc-logo-box" style="background:linear-gradient(135deg,${v.color},${v.color}99)">${v.name.split(' ').map(w=>w[0]).slice(0,2).join('')}</div>
+      <div class="vc-name">${v.name}</div>
+      <div class="vc-invested">${v.invested} invested · Est. ${v.founded}</div>
+      <p class="vc-desc">${v.desc}</p>
+      <div>
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--slate-400);margin-bottom:6px">Investment Stage</div>
+        <div class="vc-chips">${v.stage.map(s=>`<span class="vc-chip vc-chip-stage">${s}</span>`).join('')}</div>
+      </div>
+      <div style="margin-top:10px">
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--slate-400);margin-bottom:6px">Sector Focus</div>
+        <div class="vc-chips">${v.sectors.map(s=>`<span class="vc-chip vc-chip-sector">${s}</span>`).join('')}</div>
+      </div>
+      <div class="vc-portfolio" style="margin-top:12px">
+        <div class="vc-portfolio-title">Notable Portfolio</div>
+        <div class="vc-portfolio-chips">${v.portfolio.map(p=>`<span class="vc-portfolio-chip">${p}</span>`).join('')}</div>
+      </div>
+      <a href="${v.website}" target="_blank" class="btn btn-outline" style="width:100%;justify-content:center;margin-top:4px">Visit Website ↗</a>
+    </div>`).join('');
+  initScrollReveal();
+  hideLoader();
+});
+</script>
+</body></html>

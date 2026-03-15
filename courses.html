@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrepreneur Courses | DecodBiz</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div id="loading-overlay" class="loading-overlay"><div class="spinner"></div><div class="loading-text">Loading Courses…</div></div>
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo font-display">Decod<span>Biz</span></a>
+    <div class="nav-links"><a href="index.html" class="nav-link">Home</a><a href="bizmatch.html" class="nav-link">BizMatch</a><a href="startups.html" class="nav-link">Startups</a><a href="schemes.html" class="nav-link">Schemes</a><a href="courses.html" class="nav-link active">Courses</a><a href="experts.html" class="nav-link">Experts</a><a href="vcs.html" class="nav-link">VC Firms</a><a href="about.html" class="nav-link">About</a></div>
+    <div class="nav-cta"><a href="bizmatch.html" class="btn btn-primary">Start BizMatch</a></div>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div id="mobile-menu" class="mobile-menu"><a href="index.html" class="nav-link">Home</a><a href="bizmatch.html" class="nav-link">BizMatch</a><a href="startups.html" class="nav-link">Startups</a><a href="schemes.html" class="nav-link">Schemes</a><a href="courses.html" class="nav-link active">Courses</a><a href="experts.html" class="nav-link">Experts</a><a href="vcs.html" class="nav-link">VC Firms</a><a href="about.html" class="nav-link">About</a><a href="bizmatch.html" class="btn btn-primary" style="margin-top:8px">Start BizMatch →</a></div>
+<section class="page-hero"><div class="hero-grid"></div><div class="container" style="position:relative"><div class="page-hero-pill">📚 Learn from the Best</div><h1 class="page-hero-title">Entrepreneur <span class="gradient-text">Courses</span></h1><p class="page-hero-sub">Courses by IIM professors, Shark Tank founders, and domain experts. Practical, affordable, and India-focused.</p></div></section>
+<section class="section" style="background:var(--slate-50)">
+  <div class="container">
+    <div class="cards-grid" id="courses-grid"></div>
+  </div>
+</section>
+<footer><div class="container"><div class="footer-grid"><div><div class="nav-logo font-display" style="font-size:1.375rem;color:var(--white)">Decod<span style="color:var(--teal-400)">Biz</span></div><p class="footer-brand-desc">India's first Shark Tank-powered recommendation engine.</p></div><div><div class="footer-col-title">Platform</div><a href="bizmatch.html" class="footer-link">BizMatch</a><a href="startups.html" class="footer-link">Startups</a><a href="schemes.html" class="footer-link">Schemes</a></div><div><div class="footer-col-title">Resources</div><a href="experts.html" class="footer-link">Experts</a><a href="vcs.html" class="footer-link">VC Firms</a><a href="about.html" class="footer-link">About</a></div><div><div class="footer-col-title">Govt Links</div><a href="https://startupindia.gov.in" target="_blank" class="footer-link">Startup India ↗</a><a href="https://mudra.org.in" target="_blank" class="footer-link">MUDRA ↗</a></div></div><div class="footer-bottom"><span class="footer-copy">© 2025 DecodBiz 🇮🇳</span><span class="footer-disclaimer">Not affiliated with Shark Tank India</span></div></div></footer>
+<script src="data/all_startups.js"></script><script src="js/ui.js"></script>
+<script>
+const COURSES = [
+  { icon:'📊', title:'Finance for First-Time Entrepreneurs', instructor:'Prof. Rajan Mehta, IIM Ahmedabad', platform:'DecodBiz', duration:'6 hours', level:'beginner', rating:4.7, enrolled:3241, price:'₹399', desc:'Master P&L, cash flow, break-even, and fundraising fundamentals.', tags:['Finance','Fundraising'], link:'#' },
+  { icon:'🏷️', title:'D2C Brand Building 101', instructor:'Vineeta Singh (SUGAR Cosmetics)', platform:'DecodBiz', duration:'8 hours', level:'intermediate', rating:4.9, enrolled:5618, price:'₹799', desc:'Scale from ₹0 to ₹500Cr — D2C strategy, brand positioning, and digital marketing.', tags:['D2C','Branding'], link:'#' },
+  { icon:'🌾', title:'AgriTech & Rural Business', instructor:'Dr. Ashok Dalwai, NITI Aayog', platform:'DecodBiz', duration:'5 hours', level:'beginner', rating:4.5, enrolled:1820, price:'₹299', desc:'Build tech-driven agri businesses in Tier-2 and Tier-3 markets.', tags:['AgriTech','Rural'], link:'#' },
+  { icon:'⚖️', title:'Legal Essentials for Startups', instructor:'Adv. Priya Kapoor, Bombay HC', platform:'DecodBiz', duration:'4 hours', level:'beginner', rating:4.6, enrolled:2103, price:'₹499', desc:'Company registration, IP protection, founder agreements, and DPIIT recognition.', tags:['Legal','Compliance'], link:'#' },
+  { icon:'🦈', title:'Pitch Perfect: Shark Tank Prep', instructor:'Aman Gupta (boAt)', platform:'DecodBiz', duration:'5 hours', level:'advanced', rating:4.8, enrolled:7412, price:'₹999', desc:'Craft an investor-ready pitch deck. Financial modelling, story structure, shark Q&A.', tags:['Pitching','Investor'], link:'#' },
+  { icon:'🛒', title:'E-commerce & Quick Commerce', instructor:'Peyush Bansal (Lenskart)', platform:'DecodBiz', duration:'7 hours', level:'intermediate', rating:4.7, enrolled:4318, price:'₹699', desc:'Launch and scale on Amazon, Flipkart, Zepto, and Blinkit.', tags:['E-commerce','Marketplace'], link:'#' },
+];
+const LEVEL_CLASS = { beginner:'level-beginner', intermediate:'level-intermediate', advanced:'level-advanced' };
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('courses-grid').innerHTML = COURSES.map((c,i)=>`
+    <div class="course-card reveal" style="animation-delay:${i*80}ms">
+      <div class="course-card-top">
+        <div class="course-icon">${c.icon}</div>
+        <span class="course-level ${LEVEL_CLASS[c.level]||'level-beginner'}">${c.level.charAt(0).toUpperCase()+c.level.slice(1)}</span>
+        <div class="course-title">${c.title}</div>
+        <div class="course-instructor">${c.instructor}</div>
+        <p class="course-desc">${c.desc}</p>
+        <div class="course-meta">
+          <span class="course-meta-item">⭐ ${c.rating}</span>
+          <span class="course-meta-item">⏱ ${c.duration}</span>
+          <span class="course-meta-item">👥 ${c.enrolled.toLocaleString('en-IN')}</span>
+        </div>
+        <div class="sc-tags" style="margin-top:10px">${c.tags.map(t=>`<span class="sc-tag">${t}</span>`).join('')}</div>
+      </div>
+      <div class="course-card-bottom">
+        <div class="course-price">${c.price}</div>
+        <a href="${c.link}" class="btn btn-navy btn-sm">Enrol Now →</a>
+      </div>
+    </div>`).join('');
+  initScrollReveal();
+  hideLoader();
+});
+</script>
+</body></html>

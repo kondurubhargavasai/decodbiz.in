@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Government Funding Schemes | DecodBiz</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div id="loading-overlay" class="loading-overlay"><div class="spinner"></div><div class="loading-text">Loading Schemes…</div></div>
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo font-display">Decod<span>Biz</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a><a href="bizmatch.html" class="nav-link">BizMatch</a><a href="startups.html" class="nav-link">Startups</a><a href="schemes.html" class="nav-link active">Schemes</a><a href="courses.html" class="nav-link">Courses</a><a href="experts.html" class="nav-link">Experts</a><a href="vcs.html" class="nav-link">VC Firms</a><a href="about.html" class="nav-link">About</a>
+    </div>
+    <div class="nav-cta"><a href="bizmatch.html" class="btn btn-primary">Start BizMatch</a></div>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div id="mobile-menu" class="mobile-menu">
+  <a href="index.html" class="nav-link">Home</a><a href="bizmatch.html" class="nav-link">BizMatch</a><a href="startups.html" class="nav-link">Startups</a><a href="schemes.html" class="nav-link active">Schemes</a><a href="courses.html" class="nav-link">Courses</a><a href="experts.html" class="nav-link">Experts</a><a href="vcs.html" class="nav-link">VC Firms</a><a href="about.html" class="nav-link">About</a>
+  <a href="bizmatch.html" class="btn btn-primary" style="margin-top:8px">Start BizMatch →</a>
+</div>
+<section class="page-hero">
+  <div class="hero-grid"></div>
+  <div class="container" style="position:relative">
+    <div class="page-hero-pill">🏛️ Government Support</div>
+    <h1 class="page-hero-title">Startup Funding <span class="gradient-text">Schemes</span></h1>
+    <p class="page-hero-sub">₹10,000 Crore+ in government funding available. Discover schemes, check eligibility, and apply directly to official portals.</p>
+  </div>
+</section>
+
+<section class="section" style="background:var(--slate-50)">
+  <div class="container">
+    <div class="schemes-grid" id="schemes-grid"></div>
+  </div>
+</section>
+
+<!-- How to Apply -->
+<section class="section">
+  <div class="container text-center">
+    <div class="section-label">Step by Step</div>
+    <h2 class="h2" style="color:var(--navy-900)">How to Apply for Schemes</h2>
+    <div class="steps-grid" style="margin-top:40px">
+      <div class="step-card reveal"><div class="step-num">01</div><div class="step-icon">📋</div><div class="step-title">Check Eligibility</div><p class="step-text">Each scheme has specific eligibility criteria. Read them carefully before applying.</p></div>
+      <div class="step-card reveal reveal-delay-1"><div class="step-num">02</div><div class="step-icon">📄</div><div class="step-title">Prepare Documents</div><p class="step-text">Aadhaar, PAN, Business registration, bank statements, and project report as required.</p></div>
+      <div class="step-card reveal reveal-delay-2"><div class="step-num">03</div><div class="step-icon">🖥️</div><div class="step-title">Apply Online</div><p class="step-text">Click "Apply Now" on any scheme card to go directly to the official government portal.</p></div>
+      <div class="step-card reveal reveal-delay-3"><div class="step-num">04</div><div class="step-icon">🏦</div><div class="step-title">Bank Processing</div><p class="step-text">Applications are processed by designated banks. Track status on the official portal.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm section-dark">
+  <div class="container text-center" style="position:relative">
+    <h2 class="h2" style="margin-bottom:12px">Not sure which scheme suits you?</h2>
+    <p class="body-lg" style="margin-bottom:28px">BizMatch auto-suggests the right scheme alongside each startup recommendation.</p>
+    <a href="bizmatch.html" class="btn btn-primary" style="padding:15px 36px">Find My Startup + Scheme →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="nav-logo font-display" style="font-size:1.375rem;color:var(--white)">Decod<span style="color:var(--teal-400)">Biz</span></div><p class="footer-brand-desc">India's first Shark Tank-powered recommendation engine.</p></div>
+      <div><div class="footer-col-title">Platform</div><a href="bizmatch.html" class="footer-link">BizMatch</a><a href="startups.html" class="footer-link">Startups</a><a href="schemes.html" class="footer-link">Schemes</a></div>
+      <div><div class="footer-col-title">Resources</div><a href="experts.html" class="footer-link">Experts</a><a href="vcs.html" class="footer-link">VC Firms</a><a href="about.html" class="footer-link">About</a></div>
+      <div><div class="footer-col-title">Apply Now</div><a href="https://startupindia.gov.in" target="_blank" class="footer-link">Startup India ↗</a><a href="https://mudra.org.in" target="_blank" class="footer-link">MUDRA ↗</a><a href="https://standupmitra.in" target="_blank" class="footer-link">Standup India ↗</a><a href="https://kviconline.gov.in" target="_blank" class="footer-link">PMEGP ↗</a></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">© 2025 DecodBiz 🇮🇳</span><span class="footer-disclaimer">Not affiliated with Shark Tank India</span></div>
+  </div>
+</footer>
+
+<script src="data/all_startups.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/bizmatch.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const grid = document.getElementById('schemes-grid');
+  grid.innerHTML = SCHEMES_DATA.map((s, i) => `
+    <div class="scheme-card reveal" style="animation-delay:${i*80}ms">
+      <div class="scheme-icon">${s.icon}</div>
+      <div class="scheme-name">${s.name}</div>
+      <div class="scheme-amount">${s.amount}</div>
+      <p class="scheme-desc">${s.desc}</p>
+      <div class="scheme-eligibility"><strong>Eligibility:</strong> ${s.eligibility}</div>
+      <div class="scheme-benefits">${s.benefits.map(b=>`<div class="scheme-benefit">${b}</div>`).join('')}</div>
+      <a href="${s.applyLink}" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center">Apply Now →</a>
+    </div>`).join('');
+  initScrollReveal();
+  hideLoader();
+});
+</script>
+</body>
+</html>
